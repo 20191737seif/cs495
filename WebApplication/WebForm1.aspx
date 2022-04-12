@@ -20,13 +20,22 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
+                        &nbsp;</td>
+                    <td class="auto-style2">
+                        <asp:Image ID="Image1" runat="server" Width="175px"  />
+                    </td>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2"></td>
+                </tr>
+                <tr>
+                    <td>
                         <asp:Label ID="Label1" runat="server" Text="UserName"></asp:Label>
                     </td>
-                    <td class="auto-style2">
+                    <td>
                         <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
                     </td>
-                    <td class="auto-style2"></td>
-                    <td class="auto-style2"></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>
@@ -50,12 +59,6 @@
                     <td>
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/WebForm2.aspx">SignUP</asp:HyperLink>
                     </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
