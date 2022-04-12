@@ -20,28 +20,36 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
-                        <asp:LoginName ID="LoginName1" runat="server" />
-                        <asp:Login ID="Login1" runat="server" Height="138px" Width="494px">
-                        </asp:Login>
+                        <asp:Label ID="Label1" runat="server" Text="UserName"></asp:Label>
+                    </td>
+                    <td class="auto-style2">
+                        <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
                     </td>
                     <td class="auto-style2"></td>
                     <td class="auto-style2"></td>
-                    <td class="auto-style2"></td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
+                    <td>
+                        <asp:Button ID="Button1" runat="server" Text="LOGIN" />
+                    </td>
                     <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/WebForm2.aspx">SignUP</asp:HyperLink>
+                    </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
