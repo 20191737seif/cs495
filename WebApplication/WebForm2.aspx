@@ -8,12 +8,14 @@
     <style type="text/css">
         .auto-style1 {
             width: 100%;
+            height: 205px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+        </div>
             <table class="auto-style1">
                 <tr>
                     <td>
@@ -47,7 +49,6 @@
                     <td>&nbsp;</td>
                 </tr>
             </table>
-        </div>
     </form>
 </body>
 </html>
