@@ -373,7 +373,7 @@
             <td class="auto-style43"></td>
             <td class="auto-style77"></td>
             <td class="auto-style44">
-                <asp:RadioButton ID="RadioButton1" runat="server" GroupName="sad" OnCheckedChanged="RadioButton1_CheckedChanged" Text="Female" />
+                <asp:RadioButton ID="RadioButton1" runat="server" GroupName="sad" OnCheckedChanged="RadioButton1_CheckedChanged" Text="Female" TextAlign="Left" />
                 <asp:RadioButton ID="RadioButton2" runat="server" GroupName="sad" Height="0px" Text="Male" TextAlign="Left" />
             </td>
             <td class="auto-style69"></td>
