@@ -303,9 +303,24 @@
                 <asp:TextBox ID="TextBox1" runat="server"  placeholder="Username" Height="43px" Width="236px" CssClass="frame"></asp:TextBox>
             </td>
             <td class="auto-style65">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Please Enter Your Name"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Please Enter Your UserName"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style81"></td>
+        </tr>
+        <tr>
+            <td class="auto-style57">&nbsp;</td>
+            <td class="auto-style49">&nbsp;</td>
+            <td class="auto-style23">&nbsp;</td>
+            <td class="auto-style73">
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="TextBox6" ErrorMessage="Wrong" ValidationExpression="&quot;\w{5,10}\d?&quot;"></asp:RegularExpressionValidator>
+            </td>
+            <td class="auto-style24">
+                <asp:TextBox ID="TextBox6" runat="server"  placeholder="Name" Height="43px" Width="236px" CssClass="frame"></asp:TextBox>
+            </td>
+            <td class="auto-style65">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextBox6" ErrorMessage="Please Enter Your Name"></asp:RequiredFieldValidator>
+            </td>
+            <td class="auto-style81">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style58"></td>
@@ -327,13 +342,13 @@
             <td class="auto-style50"></td>
             <td class="auto-style7"></td>
             <td class="auto-style74">
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Wrong" ValidationExpression=" &quot;(01[0-2]\d{8})&quot;"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Wrong" ValidationExpression="(?:0[1-9]|1[012])[-/.](?:0[1-9]|[12][0-9]|3[01])[-/.](?:19\d{2}|20[01][0-9]|2020)\b"></asp:RegularExpressionValidator>
             </td>
             <td class="auto-style10">
-                <asp:TextBox ID="TextBox3" CssClass="frame" runat="server" Height="43px" Width="238px" placeholder="Phone Number"></asp:TextBox>
+                <asp:TextBox ID="TextBox3" CssClass="frame" runat="server" Height="43px" Width="238px" placeholder="Birth date"></asp:TextBox>
             </td>
             <td class="auto-style66">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Enter Your Phone Number"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Enter Your Birthday"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style82"></td>
         </tr>
