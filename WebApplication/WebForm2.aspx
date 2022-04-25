@@ -1,10 +1,51 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="WebApplication.WebForm2" %>
+<%@ Import Namespace="System.Data.SqlClient" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Hardwere Market</title>
+
+    
+         <script runat="server">
+             protected void Button1_Click(object sender, EventArgs e)
+             {
+                 //Create Connection Object
+                 SqlConnection conn = new SqlConnection();
+                 conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Data.mdf;Integrated Security=True";
+
+
+
+                 //2-Create insert statement
+                 string strInsert = String.Format("INSERT INTO member VALUES('{0}','{1}','{2}','{3}','{4}','{5},'{6}')", Textbox1.Text, TextBox6.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text,RadioButtonList1.SelectedValue);
+             /*    string strInsert = "INSERT INTO member " +
+            " VALUES('" + Textbox1.Text + "', '"
+            + TextBox6.Text + "', '"
+           + TextBox2.Text+ "', '"
+             + TextBox3.Text + "', '"
+            + TextBox4.Text + "', '"
+            + TextBox5.Text + "', '"
+            + RadioButtonList1.SelectedValue +"')";*/
+
+
+                 //3- Create SQL command
+                 SqlCommand cmdInsert = new SqlCommand(strInsert, conn);
+                 // 4-Open the database
+                 conn.Open();
+                 //5-Execute the SQL 
+                 cmdInsert.ExecuteNonQuery();
+                 //6-Close the database
+                 conn.Close();
+                 Lblmsg.Text = "Done!" + Textbox1;
+
+             }
+
+
+    </script>
+
+
+
+
     <style>
        body {
 
@@ -265,7 +306,15 @@
             width: 513px;
         }
 
+        .auto-style94 {
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
     </style>
+
+
+
 
 
     </head>
@@ -297,10 +346,10 @@
             <td class="auto-style49"></td>
             <td class="auto-style23"></td>
             <td class="auto-style73">
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Wrong" ValidationExpression="&quot;\w{5,10}\d?&quot;"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Wrong" ValidationExpression="\w{5,10}\d?"></asp:RegularExpressionValidator>
             </td>
             <td class="auto-style24">
-                <asp:TextBox ID="TextBox1" runat="server"  placeholder="Username" Height="43px" Width="236px" CssClass="frame"></asp:TextBox>
+                <asp:TextBox ID="Textbox1" runat="server"  placeholder="Username" Height="43px" Width="236px" CssClass="frame"></asp:TextBox>
             </td>
             <td class="auto-style65">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Please Enter Your UserName"></asp:RequiredFieldValidator>
@@ -312,7 +361,7 @@
             <td class="auto-style49">&nbsp;</td>
             <td class="auto-style23">&nbsp;</td>
             <td class="auto-style73">
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="TextBox6" ErrorMessage="Wrong" ValidationExpression="&quot;\w{5,10}\d?&quot;"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="TextBox6" ErrorMessage="Wrong" ValidationExpression="\w{5,10}\d?"></asp:RegularExpressionValidator>
             </td>
             <td class="auto-style24">
                 <asp:TextBox ID="TextBox6" runat="server"  placeholder="Name" Height="43px" Width="236px" CssClass="frame"></asp:TextBox>
@@ -327,7 +376,7 @@
             <td class="auto-style50"></td>
             <td class="auto-style7"></td>
             <td class="auto-style74">
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Wrong" ValidationExpression="&quot;\w+([-+.']\w+)@\w+([-.]\w+).\w+([-.]\w+)*&quot;"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Wrong" ValidationExpression="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></asp:RegularExpressionValidator>
             </td>
             <td class="auto-style10">
                 <asp:TextBox ID="TextBox2" runat="server" Height="43px" Width="237px" CssClass="frame"  placeholder="Email"></asp:TextBox>
@@ -357,7 +406,7 @@
             <td class="auto-style51"></td>
             <td class="auto-style35"></td>
             <td class="auto-style75">
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox4" ErrorMessage="Enter a small ,Capital ,number,symobol pls" ValidationExpression="&quot;^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.\W).*$&quot;"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox4" ErrorMessage="Enter a small ,Capital ,number,symobol pls" ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"></asp:RegularExpressionValidator>
             </td>
             <td class="auto-style36">
                 <asp:TextBox ID="TextBox4" runat="server" placeholder="Password" CssClass="frame"  type="password"  Height="43px" Width="235px"></asp:TextBox>
@@ -388,8 +437,10 @@
             <td class="auto-style43"></td>
             <td class="auto-style77"></td>
             <td class="auto-style44">
-                <asp:RadioButton ID="RadioButton1" runat="server" GroupName="sad" OnCheckedChanged="RadioButton1_CheckedChanged" Text="Female" TextAlign="Left" />
-                <asp:RadioButton ID="RadioButton2" runat="server" GroupName="sad" Height="0px" Text="Male" TextAlign="Left" />
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+                    <asp:ListItem Selected="True" Value="M">Male</asp:ListItem>
+                    <asp:ListItem Value="M">Female</asp:ListItem>
+                </asp:RadioButtonList>
             </td>
             <td class="auto-style69"></td>
             <td class="auto-style85"></td>
@@ -400,9 +451,11 @@
             <td class="auto-style89"></td>
             <td class="auto-style90"></td>
             <td class="auto-style91">
-                <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="frame" Width="143px" />
+                <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="auto-style94" Width="143px" OnClick="Button1_Click" />
             </td>
-            <td class="auto-style92"></td>
+            <td class="auto-style92">
+                <asp:Label ID="Lblmsg" runat="server"></asp:Label>
+            </td>
             <td class="auto-style93"></td>
         </tr>
         <tr>
