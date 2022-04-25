@@ -16,9 +16,6 @@
         .auto-style3 {
             width: 87px;
         }
-        .auto-style4 {
-            width: 250px;
-        }
         .auto-style5 {
             width: 99px;
         }
@@ -33,7 +30,7 @@
             height: 98px;
         }
         .auto-style9 {
-            width: 250px;
+            width: 275px;
             height: 98px;
         }
         .auto-style10 {
@@ -48,6 +45,12 @@
             width: 197px;
             height: 98px;
         }
+        .auto-style13 {
+            width: 261px;
+        }
+        .auto-style14 {
+            width: 275px;
+        }
     </style>
 </head>
 <body>
@@ -58,24 +61,25 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style14">&nbsp;</td>
                     <td class="auto-style5">
-                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/WebForm2.aspx">SignUP /</asp:HyperLink>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/WebForm1.aspx">Login</asp:HyperLink>
-                    </td>
+                        &nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style7">
-                        <asp:Image ID="Image1" runat="server" Height="197px" ImageUrl="image/images.jpg" Width="238px" />
                     </td>
                     <td class="auto-style7"></td>
-                    <td class="auto-style8">
-                        <asp:Label ID="Label1" runat="server" Text="Hardwere Market"></asp:Label>
+                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style9">
+                        <asp:Image ID="Image1" runat="server" Height="197px" ImageUrl="image/images.jpg" Width="238px" />                        <h1 class="auto-style13">Hardware Market</h1>
+
+                        </td>
+                    <td class="auto-style10">
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/WebForm2.aspx">SignUP /</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/WebForm1.aspx">Login</asp:HyperLink>
                     </td>
-                    <td class="auto-style9"></td>
-                    <td class="auto-style10"></td>
                     <td class="auto-style11"></td>
                     <td class="auto-style12"></td>
                 </tr>
@@ -83,7 +87,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style14">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
@@ -92,7 +96,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style14">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
@@ -101,7 +105,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style14">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
@@ -110,7 +114,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style14">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>
@@ -119,7 +123,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style14">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">&nbsp;</td>

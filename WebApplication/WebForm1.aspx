@@ -184,7 +184,7 @@
                 <td class="auto-style30">&nbsp;</td>
                 <td class="auto-style12">&nbsp;</td>
                 <td class="auto-style18">
-                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="XX-Large" ForeColor="White" Text="Hardwere Market"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="XX-Large" ForeColor="White" Text="Hardware Market"></asp:Label>
                 </td>
                 <td class="auto-style24">&nbsp;</td>
                 <td class="auto-style36">&nbsp;</td>
